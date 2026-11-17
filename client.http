@@ -1,0 +1,30 @@
+@BASE_URL=http://127.0.0.1:5000
+
+POST {{BASE_URL}}/tasks
+Content-Type: application/json
+
+{
+	"title": "Learn Python",
+	"description": "Learn Flask: Python web framework"
+}
+
+###
+GET {{BASE_URL}}/tasks
+Content-Type: application/json
+
+###
+GET {{BASE_URL}}/tasks/1
+Content-Type: application/json
+
+###
+PUT {{BASE_URL}}/tasks/1
+Content-Type: application/json
+
+{
+	"title": "Learn Python [updated]",
+	"description": null,
+	"completed": true
+}
+
+###
+DELETE {{BASE_URL}}/tasks/1
